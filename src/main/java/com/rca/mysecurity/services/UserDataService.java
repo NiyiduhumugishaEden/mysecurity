@@ -14,14 +14,17 @@ import java.util.Optional;
 
 @Service
 public class UserDataService implements UserDetailsService {
+    @Autowired
     private IUserDataRepository repository;
-    private  PasswordEncoder encoder;
 
     @Autowired
-    public UserDataService(IUserDataRepository repository, @Lazy PasswordEncoder encoder) {
-        this.repository = repository;
-        this.encoder = encoder;
-    }
+    private  PasswordEncoder encoder;
+
+//    @Autowired
+//    public UserDataService(IUserDataRepository repository, @Lazy PasswordEncoder encoder) {
+//        this.repository = repository;
+//        this.encoder = encoder;
+//    }
 
     public UserDataService() {
 

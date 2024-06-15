@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+
 public class UserDataDetails implements UserDetails {
     private static final long serialVersionUID = 1L;
     //private String name;

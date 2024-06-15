@@ -46,6 +46,7 @@ public class SecurityConfig {
     }
 
 
+
     @Bean
     public AuthenticationEntryPoint unauthorizedHandler(){
         return new AuthenticationEntryPoint() {
@@ -68,9 +69,9 @@ public class SecurityConfig {
                 .exceptionHandling()
                 .and()
                 .authorizeHttpRequests()
-                .antMatchers("/users/**","/academics/**").permitAll()
+                .antMatchers("/users/addNewUser","/users/generateToken","/academics/**").permitAll()
 //                .antMatchers("/users/user/**").permitAll()
-//                .antMatchers( "/users/admin/**").permitAll()
+//                .antMatchers( "/users/admin/**").authenticated()
                 .anyRequest()
                 .authenticated()
                 .and()
